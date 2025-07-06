@@ -11,7 +11,7 @@ highlight link diceNumber Number
 syntax match diceRoll "\v\d+d\d+(\s*[\+\-*/]\s*\d+)?" containedin=ALLBUT,diceComment
 highlight link diceRoll WarningMsg
 
-syntax region diceString start=+"+ skip=+\\\\\|\\"+ end=+"+ containedin=ALLBUT diceComment
+syntax region diceString start=+"+ skip=+\\\\\|\\"+ end=+"+
 highlight link diceString String
 
 syntax match diceComment "--.*"
