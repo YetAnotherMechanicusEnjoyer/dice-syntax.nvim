@@ -6,12 +6,12 @@ syntax keyword diceFunction print
 highlight link diceFunction Function
 
 syntax match diceRoll "\v\d+d\d+(\s*[\+\-*/]\s*\d+)?"
-highlight link diceRoll Type
+highlight link diceRoll Special
 
 syntax region diceString start=+"+ skip=+\\\\\|\\"+ end=+"+
 highlight link diceString String
 
-syntax match diceComment "//.*"
+syntax match diceComment "// *"
 highlight link diceComment Comment
 
 syntax match diceOperator "[+\-*/=<>]"
