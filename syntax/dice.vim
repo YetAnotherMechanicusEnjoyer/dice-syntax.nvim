@@ -1,11 +1,11 @@
 
 syntax keyword diceKeyword if then else end
-highlight link diceKeyword Keyword
+highlight link diceKeyword Conditionnal
 
 syntax keyword diceFunction print
 highlight link diceFunction Function
 
-syntax match diceRoll "\v\d+d\d+(\s*\s*\d+)?"
+syntax match diceRoll "\v\d+d\d+(\s*[\+\-*/]\s*\d+)?"
 highlight link diceRoll Number
 
 syntax region diceString start=+"+ skip=+\\\\\|\\"+ end=+"+
