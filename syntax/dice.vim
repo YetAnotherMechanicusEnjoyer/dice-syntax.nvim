@@ -5,7 +5,7 @@ highlight link diceKeyword Conditional
 syntax keyword diceFunction print
 highlight link diceFunction Function
 
-syntax match diceNumber "\v\d+" containedin=ALLBUT,diceRoll
+syntax match diceNumber "\v\d+" containedin=ALLBUT,diceRoll,diceString
 highlight link diceNumber Number
 
 syntax match diceRoll "\v\d+d\d+(\s*[\+\-*/]\s*\d+)?"
