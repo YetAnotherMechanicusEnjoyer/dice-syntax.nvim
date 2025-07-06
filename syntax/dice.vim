@@ -14,11 +14,11 @@ highlight link diceRoll WarningMsg
 syntax region diceString start=+"+ skip=+\\\\\|\\"+ end=+"+
 highlight link diceString String
 
-syntax match diceComment "--.*" containedin=TOP
+syntax match diceComment "//.*" containedin=TOP
 highlight link diceComment Comment
 
 syntax match diceOperator "[+\-*/=<>]"
 highlight link diceOperator Operator
 
 syntax match diceVariable "\v[a-zA-Z_][a-zA-Z0-9_]*" containedin=ALLBUT,diceKeyword,diceFunction,diceRoll,diceNumber,diceString,diceComment
-highlight link diceVariable SpecialComment
+highlight link diceVariable Underline
