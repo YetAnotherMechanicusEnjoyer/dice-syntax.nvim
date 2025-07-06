@@ -1,23 +1,23 @@
 
-syntax keyword diceKeyword if then else end
+syntax keyword diceKeyword if then else end containedin=ALLBUT, diceComment
 highlight link diceKeyword Title
 
-syntax keyword diceFunction print
+syntax keyword diceFunction print containedin=ALLBUT, diceComment
 highlight link diceFunction Function
 
 syntax match diceNumber "\v\d+" containedin=ALLBUT,diceRoll
 highlight link diceNumber Number
 
-syntax match diceRoll "\v\d+d\d+(\s*[\+\-*/]\s*\d+)?"
+syntax match diceRoll "\v\d+d\d+(\s*[\+\-*/]\s*\d+)?" containedin=ALLBUT,diceComment
 highlight link diceRoll WarningMsg
 
-syntax region diceString start=+"+ skip=+\\\\\|\\"+ end=+"+
+syntax region diceString start=+"+ skip=+\\\\\|\\"+ end=+"+ containedin=ALLBUT diceComment
 highlight link diceString String
 
 syntax match diceComment "--.*"
 highlight link diceComment Comment
 
-syntax match diceOperator "[+\-*/=<>]"
+syntax match diceOperator "[+\-*/=<>]" containedin=ALLBUT,diceComment
 highlight link diceOperator Operator
 
 syntax match diceVariable "\v[a-zA-Z_][a-zA-Z0-9_]*" containedin=ALLBUT,diceKeyword,diceFunction,diceRoll,diceNumber,diceString,diceComment
