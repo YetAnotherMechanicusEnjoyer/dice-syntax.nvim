@@ -5,8 +5,8 @@ highlight link diceKeyword Repeat
 syntax keyword diceFunction print
 highlight link diceFunction Function
 
-syntax match diceRoll "\v\d+d\d+"
-highlight link diceRoll Statement
+syntax match diceRoll "\v\d+d\d+(\s*[\+\-*/]\s*\d+)?"
+highlight link diceRoll Boolean
 
 syntax match diceNumber "\v\d+"
 highlight link diceNumber Number
