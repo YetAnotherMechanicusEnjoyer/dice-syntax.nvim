@@ -1,6 +1,6 @@
 
 syntax keyword diceKeyword if then else end
-highlight link diceKeyword Conditional
+highlight link diceKeyword Special
 
 syntax keyword diceFunction print
 highlight link diceFunction Function
