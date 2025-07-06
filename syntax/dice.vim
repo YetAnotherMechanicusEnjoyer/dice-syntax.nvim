@@ -1,6 +1,6 @@
 
 syntax keyword diceKeyword if then else end
-highlight link diceKeyword Title
+highlight link diceKeyword Todo
 
 syntax keyword diceFunction print
 highlight link diceFunction Function
@@ -21,4 +21,4 @@ syntax match diceOperator "[+\-*/=<>]"
 highlight link diceOperator Operator
 
 syntax match diceVariable "\v[a-zA-Z_][a-zA-Z0-9_]*" containedin=ALLBUT,diceKeyword,diceFunction,diceRoll,diceNumber,diceString,diceComment
-highlight link diceVariable Underline
+highlight link diceVariable Underlined
